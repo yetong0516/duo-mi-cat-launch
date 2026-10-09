@@ -1,0 +1,41 @@
+{
+  "cat_name": "小猫",
+  "identity_description": "",
+  "model": "Seedance 2.0",
+  "cash_budget_rmb": 0,
+  "quota_note": "仅使用本次任务已获用户授权的现有创作额度，不购买、不充值、不续订。",
+  "music_path": null,
+  "photos": [
+    {
+      "path": "photos/face_front.jpg",
+      "role": "face_front"
+    },
+    {
+      "path": "photos/body_front.jpg",
+      "role": "body_front"
+    },
+    {
+      "path": "photos/body_left.jpg",
+      "role": "body_left"
+    },
+    {
+      "path": "photos/body_right.jpg",
+      "role": "body_right"
+    },
+    {
+      "path": "photos/body_back.jpg",
+      "role": "body_back"
+    },
+    {
+      "path": "photos/detail.jpg",
+      "role": "detail"
+    }
+  ],
+  "looks": [
+    "原毛无衣服",
+    "只有浅蓝蝴蝶结",
+    "纯白小T恤",
+    "浅灰卫衣，兜帽在背后",
+    "轻薄浅蓝牛仔外套"
+  ]
+}

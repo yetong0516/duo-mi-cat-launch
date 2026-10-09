@@ -1,0 +1,14 @@
+{
+  "font_name": "PingFangSC-Semibold",
+  "base_font_px": 32,
+  "reference_height": 720,
+  "width_scale": 0.9,
+  "tracking_px": 1.15,
+  "gradient": [
+    "#6C52B1",
+    "#1E8A7A"
+  ],
+  "fade_in_seconds": 0.45,
+  "fade_out_seconds": 0.45,
+  "safe_margin_px": 24
+}

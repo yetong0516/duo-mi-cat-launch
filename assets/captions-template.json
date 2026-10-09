@@ -1,0 +1,76 @@
+[
+  {
+    "text": "${CAT_NAME}，大有可爱。",
+    "start": 4.85,
+    "end": 7,
+    "x": 0.1,
+    "y": 0.71,
+    "align": "left"
+  },
+  {
+    "text": "可爱，也有质感。",
+    "start": 8,
+    "end": 11.25,
+    "x": 0.1,
+    "y": 0.55,
+    "align": "left"
+  },
+  {
+    "text": "好心情，随身带。",
+    "start": 11.34,
+    "end": 13.16,
+    "x": 0.1,
+    "y": 0.62,
+    "align": "left"
+  },
+  {
+    "text": "撒娇不卡顿，",
+    "start": 13.17,
+    "end": 14.95,
+    "x": 0.1,
+    "y": 0.33,
+    "align": "left"
+  },
+  {
+    "text": "玩耍不掉帧。",
+    "start": 13.17,
+    "end": 14.95,
+    "x": 0.1,
+    "y": 0.275,
+    "align": "left"
+  },
+  {
+    "text": "${LOOK_COUNT}种造型，一样可爱。　每一面，都有偏爱。",
+    "start": 15.05,
+    "end": 18.93,
+    "x": 0.5,
+    "y": 0.89,
+    "align": "center"
+  },
+  {
+    "text": "可爱，集体上线。",
+    "start": 24.4,
+    "end": 26.25,
+    "x": 0.5,
+    "y": 0.85,
+    "align": "center"
+  },
+  {
+    "text": "${CAT_NAME}",
+    "start": 26.4,
+    "end": 28,
+    "x": 0.82,
+    "y": 0.84,
+    "align": "center",
+    "end_at_video_end": true
+  },
+  {
+    "text": "天生出彩。",
+    "start": 26.4,
+    "end": 28,
+    "x": 0.82,
+    "y": 0.78,
+    "align": "center",
+    "end_at_video_end": true
+  }
+]

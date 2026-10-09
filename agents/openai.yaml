@@ -1,0 +1,4 @@
+interface:
+  display_name: "Duo Mi 猫咪发布会"
+  short_description: "用多角度猫咪实拍照生成前后两段14秒发布会视频，保留原片背景并加入统一渐变配字"
+  default_prompt: "使用 $duo-mi-cat-launch，根据我提供的猫咪多角度照片，生成前14秒和后14秒发布会视频，并拼接原片、加入我指定的配乐和配字。"
