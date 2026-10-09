@@ -1,0 +1,15 @@
+{
+  "durationSeconds": 28,
+  "voice": "Tingting",
+  "rate": 180,
+  "segments": [
+    {"start": 0.35, "end": 3.9, "text": "今天，认识${CAT_NAME}。"},
+    {"start": 4.85, "end": 7.9, "text": "大有可爱。"},
+    {"start": 8.15, "end": 11.25, "text": "可爱，也有质感。"},
+    {"start": 11.55, "end": 14.9, "text": "好心情，随身带。"},
+    {"start": 15.3, "end": 19.2, "text": "${LOOK_COUNT}种造型，一样可爱。"},
+    {"start": 20.0, "end": 23.7, "text": "每一面，都有偏爱。"},
+    {"start": 24.4, "end": 26.3, "text": "可爱，集体上线。"},
+    {"start": 26.4, "end": 27.85, "text": "天生出彩。"}
+  ]
+}

@@ -3,7 +3,8 @@ import AVFoundation
 
 @main struct Concat {
  static func main() async throws {
-  let a=CommandLine.arguments;guard a.count==6 else {fatalError("Wrong argument count")}
+  let a=CommandLine.arguments;guard a.count==6 || (a.count==7 && a[6]=="mixed") else {fatalError("Wrong argument count")}
+  let mixed=a.count==7
   let composition=AVMutableComposition()
   let target=composition.addMutableTrack(withMediaType:.video,preferredTrackID:kCMPersistentTrackID_Invalid)!
   var cursor=CMTime.zero
@@ -33,7 +34,8 @@ import AVFoundation
   try await exporter.export(to:out,as:.mp4)
   let final=AVURLAsset(url:out),video=try await final.loadTracks(withMediaType:.video).first!
   let size=try await video.load(.naturalSize)
-  let report:[String:Any]=["file":out.path,"durationSeconds":try await final.load(.duration).seconds,"width":size.width,"height":size.height,"fps":try await video.load(.nominalFrameRate),"audioTracks":try await final.loadTracks(withMediaType:.audio).count,"segments":segments,"musicSource":a[3],"musicDurationSeconds":musicDuration.seconds,"videoExport":"Passthrough: original encoded video copied without filters or re-encoding","voiceoverAdded":false,"captionsAdded":false,"backgroundChanged":false,"speedChanged":false,"cropOrResizeApplied":false,"audio":"Only the specified background music, at original volume and timing; original clip audio omitted"]
+  var report:[String:Any]=["file":out.path,"durationSeconds":try await final.load(.duration).seconds,"width":size.width,"height":size.height,"fps":try await video.load(.nominalFrameRate),"audioTracks":try await final.loadTracks(withMediaType:.audio).count,"segments":segments,"audioSource":a[3],"audioDurationSeconds":musicDuration.seconds,"videoExport":"Passthrough: original encoded video copied without filters or re-encoding","voiceoverAdded":mixed,"captionsAdded":false,"backgroundChanged":false,"speedChanged":false,"cropOrResizeApplied":false,"audio":mixed ? "One pre-mixed narration/music AAC track; original clip audio omitted" : "Only the specified background music, at original volume and timing; original clip audio omitted"]
+  if !mixed {report["musicSource"]=a[3];report["musicDurationSeconds"]=musicDuration.seconds}
   let data=try JSONSerialization.data(withJSONObject:report,options:[.prettyPrinted,.sortedKeys]);try data.write(to:URL(fileURLWithPath:a[5]));print(String(data:data,encoding:.utf8)!)
  }
 }
