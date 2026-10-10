@@ -6,6 +6,14 @@
 
 公开代码与技能：[GitHub 仓库](https://github.com/yetong0516/duo-mi-cat-launch)。
 
+## PONY 成片
+
+https://github.com/user-attachments/assets/9ed6e3df-1045-4d96-804d-066944bfb7ab
+
+[下载原画质完整MP4](https://github.com/yetong0516/duo-mi-cat-launch/releases/download/v0.2.0/PONY_duo_mi_narrated_demo.mp4) · [视频与技能下载页](https://github.com/yetong0516/duo-mi-cat-launch/releases/tag/v0.2.0)
+
+约28秒，包含中文旁白、背景音乐与渐变字卡；保留原片背景、构图、动作和速度。播放时可开启声音试听旁白。播放器使用压缩展示版，下载链接提供原画质成片。
+
 ## 准备素材与环境
 
 - 推荐6张同一只猫的清晰照片：正面脸、正面全身、左侧全身、右侧全身、背面、毛色/爪尾细节各1张。最低4张：脸、全身、一个清楚侧面、背面。
@@ -96,4 +104,4 @@ git clone https://github.com/yetong0516/duo-mi-cat-launch.git ~/.codex/skills/du
 - `agents/`：Codex技能界面配置。
 - `tools/package_skillhub.py`：生成腾讯SkillHub适配包。
 
-历史PONY原版是音乐与配字版本；新配音示范版是在已有A/B原片上另加旁白，用来验证本地后期，不代表这次重新从照片生成视频。已有原片验证包括帧数/时间轴、指定音乐、背景保留及参数化造型；新生成仍须每次实际检查服务结果。素材图片、音乐、账号信息及本地测试日志不在仓库中。
+历史PONY原版是音乐与配字版本；新配音示范版是在已有A/B原片上另加旁白，用来验证本地后期，不代表这次重新从照片生成视频。已有原片验证包括帧数/时间轴、指定音乐、背景保留及参数化造型；新生成仍须每次实际检查服务结果。仓库仅展示成片预览，猫咪身份照片原件、独立音乐文件、账号信息及本地测试日志不在技能包中。
