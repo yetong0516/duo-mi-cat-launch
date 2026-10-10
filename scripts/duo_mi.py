@@ -299,9 +299,10 @@ def prepare(args):
     captions=read(SKILL/"assets/captions-template.json")
     for caption in captions: caption["text"]=Template(caption["text"]).substitute(CAT_NAME=name,LOOK_COUNT="一二三四五六"[len(looks)-1])
     save(package/"captions.draft.json",captions)
-    narration=resolve_narration(read(SKILL/"assets/narration-template.json"),narration_variables(name,looks))
-    narration.update(cat_name=name,looks=looks)
-    save(package/"narration.draft.json",narration)
+    if args.prepare_narration:
+        narration=resolve_narration(read(SKILL/"assets/narration-template.json"),narration_variables(name,looks))
+        narration.update(cat_name=name,looks=looks)
+        save(package/"narration.draft.json",narration)
     save(package/"style.json",read(SKILL/"assets/style.json"))
     return {"package":str(package),"identity_images_selected":len(staged),"missing_views":missing,"status":"prepared_only"}
 
@@ -444,7 +445,7 @@ def music_cues(args):
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__);sub=parser.add_subparsers(dest="command",required=True)
-    p=sub.add_parser("prepare");p.add_argument("manifest");p.add_argument("--out",required=True);p.set_defaults(action=prepare)
+    p=sub.add_parser("prepare");p.add_argument("manifest");p.add_argument("--out",required=True);p.add_argument("--prepare-narration",action="store_true",help="Only prepare a spoken narration draft when narration was explicitly requested.");p.set_defaults(action=prepare)
     p=sub.add_parser("continuity");p.add_argument("--package",required=True);p.add_argument("--a",required=True);p.set_defaults(action=continuity)
     p=sub.add_parser("inspect");p.add_argument("input");p.add_argument("--out",required=True);p.add_argument("--step",type=float,default=.5);p.set_defaults(action=inspect)
     p=sub.add_parser("narrate");p.add_argument("--script",required=True);p.add_argument("--manifest");p.add_argument("--cat-name");p.add_argument("--looks",nargs="+");p.add_argument("--voice");p.add_argument("--rate",type=float);p.add_argument("--duration",type=float);p.add_argument("--external");p.add_argument("--out",required=True);p.add_argument("--work",default="work/duo-mi-narration");p.add_argument("--overwrite",action="store_true");p.set_defaults(action=narrate)

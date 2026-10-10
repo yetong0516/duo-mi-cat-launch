@@ -18,4 +18,4 @@ x/y归一化0–1，y从底部计。left时x为文字左缘，center时x为文�
 
 最后两行草稿的end_at_video_end为true；assemble按实际原片完整时长解析字幕终点，不裁切视频。
 
-字幕和 [旁白稿](narration.md) 独立编辑：配音可用更短的句子，无需逐字念完所有字卡。字幕的显示时段不等同于实际讲话窗口，混音使用narration.timing.json。
+默认字幕只显示，不朗读。只有明确要求旁白或朗读时，字幕和 [可选旁白稿](narration.md) 才独立编辑；旁白无需逐字念完所有字卡。字幕显示时段不等同于实际讲话窗口，旁白混音使用narration.timing.json。
